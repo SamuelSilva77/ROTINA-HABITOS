@@ -2,6 +2,17 @@
 
 
 
+
+:root{
+    --Corverde: #0D9488;
+    --Cinzaazulado: #5B6573;
+}
+
+
+.animar{
+    color: #0d94898e;
+}
+
 @theme{
     --animate-card: card 8s infinite;
     
@@ -13,9 +24,13 @@
             transform: translate(0, 30px)
         }
     }
-}
 
-:root{
-    --Corverde: #0D9488;
-    --Cinzaazulado: #5B6573;
+    --animate-main: main 60s linear forwards;
+
+    @keyframes main {
+        to{
+          stroke-dashoffset: 480;
+          
+        }
+    }
 }

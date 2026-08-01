@@ -51,3 +51,17 @@ body.addEventListener("wheel", () => {
 
   }, 150);
 })
+
+//TEMPORIZADOR MAIN
+
+let pmain = document.getElementById("temporazidorMain")
+
+let temporazidorMain = setInterval(() => {
+  if(pmain.innerHTML == 0){
+      clearInterval(temporizadorMain)
+    }
+  
+  
+  pmain.innerHTML -= 1
+
+}, 1000);
