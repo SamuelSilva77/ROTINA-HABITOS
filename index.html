@@ -59,46 +59,148 @@
         </div>
     </header>
 
-    <main class="flex items-center justify-center px-8 mt-30 max-md:mt-15">
+    <main class="flex justify-center mt-30  max-md:mt-15  max-lg:flex-col max-lg:gap-20 items-center px-8">
 
-        <div class="flex flex-1/2 flex-col gap-4">
-            <a href="" class="flex items-center gap-2 duration-300 text-(--Corverde) shadow-[0_0_3px] shadow-[#ffffff7a] hover:shadow-[white] hover:text-[white] hover:-translate-y-1 rounded-lg w-max px-4 py-1 bg-[#0e111b]">
-                Novo modo: Foco com relatórios
-                <img src="img/next.png" alt="">
-            </a>
-
-            <h1 class="text-5xl font-bold">Suas tarefas e seu foco, <span class="text-(--Corverde)"> no mesmo app </span></h1>
-
-            <p>O Rotina reúne sua lista de tarefas e um cronômetro de foco em um só lugar. Planeje o dia, execute uma tarefa de cada vez e veja seu progresso no fim. Feito para freelancers, estudantes e times pequenos.</p>
-            
-            <div class="flex gap-6">
-                <button class="duration-200 px-6 py-3 shadow-[0_0_3px_rgba(255,255,255)]  font-medium bg-(--Corverde) hover:-translate-y-0.5 text-black hover:bg-[#10ada0 rounded-xl">Começar Grátis</button>
-                <button class="duration-200 px-6 py-3 shadow-[0_0_3px_rgba(255,255,255)] font-medium  hover:-translate-y-0.5 bg-[#0c0f1b] rounded-xl">Ver como funciona</button>
+            <div class="flex max-w-150 flex-col gap-10">
+                <a href="" class="flex items-center gap-2 duration-300 text-(--Corverde) shadow-[0_0_3px] shadow-[#ffffff7a] hover:shadow-[white] hover:text-[white] hover:-translate-y-1 rounded-lg w-max px-4 py-1 bg-[#0e111b]">
+                    Novo modo: Foco com relatórios
+                    <img src="img/next.png" alt="">
+                </a>
+    
+                <h1 class="text-5xl font-bold max-sm:text-4xl">Suas tarefas e seu foco, <span class="text-(--Corverde)"> no mesmo app </span></h1>
+    
+                <p class="text-(--Corverde)">O Rotina reúne sua lista de tarefas e um cronômetro de foco em um só lugar. Planeje o dia, execute uma tarefa de cada vez e veja seu progresso no fim. Feito para freelancers, estudantes e times pequenos.</p>
+                
+                <div class="flex gap-6 max-sm:flex-col">
+                    <button class="duration-200 px-6 py-3 shadow-[0_0_3px_rgba(255,255,255)]  font-medium bg-(--Corverde) hover:-translate-y-0.5 text-black hover:bg-[#10ada0 rounded-xl">Começar Grátis</button>
+                    <button class="duration-200 px-6 py-3 shadow-[0_0_3px_rgba(255,255,255)] font-medium  hover:-translate-y-0.5 bg-[#0c0f1b] rounded-xl">Ver como funciona</button>
+                </div>
+    
+                <ul class="flex gap-10 [&>li]:relative [&>li]:items-center [&>li]:flex  [&>li]:before:content-[] [&>li]:before:absolute [&>li]:before:-left-5 [&>li]:before:mr-2 [&>li]:before:size-3 [&>li]:before:bg-[#0b2d30] [&>li]:before:border-2 [&>li]:before:border-(--Corverde) [&>li]:before:rounded-xl"> 
+                    <li class="ml-5">Sem cartão de crédito </li>
+                    <li>Pronto em 2 minutos </li>
+                    <li>Funciona Offline </li>
+                </ul>
             </div>
-
-            <ul class="flex gap-10 [&>li]:relative [&>li]:items-center [&>li]:flex  [&>li]:before:content-[] [&>li]:before:absolute [&>li]:before:-left-5 [&>li]:before:mr-2 [&>li]:before:size-3 [&>li]:before:bg-[#0b2d30] [&>li]:before:border-2 [&>li]:before:border-(--Corverde) [&>li]:before:rounded-xl"> 
-                <li class="ml-5">Sem cartão de crédito </li>
-                <li>Pronto em 2 minutos </li>
-                <li>Funciona Offline </li>
-            </ul>
-        </div>
-
-        <div class="flex-1/2 flex justify-center" >
-            <div class="animate-card flex-1/2 flex flex-col h-100 max-w-80 shadow-[0_0_2px_white,0_0_3px_white] rounded-xl">
-                <div class="rounded-t-xl p-4 flex justify-between bg-[#122b30]">
-                    <div class="[&>button]:p-1.5 [&>button]:rounded-2xl">
-                        <button class="bg-yellow-500"></button>
-                        <button class="bg-red-500"></button>
-                        <button class="bg-green-500"></button>
+    
+            <div class="w-full flex max-w-150 justify-center" >
+                <div class="animate-card flex-1/2 flex flex-col h-120 max-w-90 shadow-[0_0_2px_white,0_0_3px_white] rounded-xl">
+                    <div class="rounded-t-xl p-4 flex justify-between bg-[#122b30]">
+                        <div class="[&>button]:p-1.5 [&>button]:rounded-2xl">
+                            <button class="bg-yellow-500"></button>
+                            <button class="bg-red-500"></button>
+                            <button class="bg-green-500"></button>
+                        </div>
+                        <span>Hoje • 3 tarefas</span>
                     </div>
-                    <span>Hoje • 3 tarefas</span>
-                </div>
-                <div class="shadow-[0_-0.5px_1px_white] h-full bg-[#122430] rounded-b-xl">
-    
+                    <div class="shadow-[0_-0.5px_1px_white] h-full bg-[#122430] rounded-b-xl">
+                        <div class="p-4 flex flex-col justify-center items-center gap-4">
+                            <p>MODO FOCO</p>
+                            
+                            
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute" width="200" height="230">
+                        <circle
+                            cx="100"
+                            cy="150"
+                            r="75"
+                            stroke-width="8"
+                            class="fill-none stroke-[#0d94892d]"
+                            />
+                            <circle
+                            cx="100"
+                            cy="150"
+                            r="75"
+                            stroke-width="8"
+                            class="rotate-270 fill-none stroke-[#0d9489] animate-main [stroke-dasharray:480] transform-fill origin-center"
+                        />
+                        </svg>
+
+                            <p class="text-2xl mt-10" id="temporazidorMain">60</p>
+                            <span class="text-sm text-(--Corverde)">Escrever proposta</span>
+                            
+                       
+                       
+                        </div>
+                        <br><br>
+                        
+                        <div class="p-4 flex flex-col gap-2.5 [&>div]:w-full [&>div]:py-1.5 [&>div]:px-4 [&>div]:rounded-lg [&>div]:border [&>div]:flex [&>div]:gap-4 [&>div]:items-center">
+                            <div class="bg-[#0E111B] ">
+                                <img src="img/check.png" alt="">
+                                <p>Revisar E-mails</p>
+                            </div>
+                            <div class="bg-[#024b45] justify-between">
+                                <div class="flex items-center gap-4">
+                                    <img src="img/selection-box.png" alt="">
+                                    <p>Escrever a proposta</p>
+                                </div>
+                                <span class="text-xs text-(--Corverde)">EM FOCO</span>
+                            </div>
+                            <div class="bg-[#0E111B]">
+                                <img src="img/selection-box.png" alt="">
+                                <p>Planejar a semana</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-    
-</body>
-</html>
+        </main>
+
+        <section class="py-20 px-8 my-20 bg-[#0b1520] flex flex-col items-center">
+            <div class="flex flex-col items-center text-center gap-4 max-w-full lg:w-120">
+                <span class="tracking-wider text-(--Corverde)">EXPERIMENTE AGORA</span>
+                <p class="text-5xl max-lg:text-4xl font-bold">Teste o modo foco aqui na página</p>
+                <span class="text-(--Cinzaazulado)">É exatamente assim que o cronômetro funciona dentro do app. Escolha um modo e comece.</span>
+            </div>
+            <div class="flex h-full justify-center items-center">
+
+                <div class="flex-1/2 flex gap-5 flex-col mt-40">
+                    <h2 class="font-bold tracking-wide text-(--Corverde) text-3xl">Um bloco por tarefa</h2>
+                    <span> No modo <span class="text-(--Corverde)"> Foco </span>, você trabalha por 25 minutos sem interrupções. Depois, uma <span class="text-(--Corverde)"> pausa curta </span> de 5 minutos para respirar. A cada 4 blocos, <span class="text-(--Corverde)"> uma pausa longa. </span> Simples e comprovado. </span>
+                    <div class="flex gap-4">
+                        <button class="duration-300 px-6 py-2 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg focus:bg-[#024B45]">Pausa • 5min</button>
+                        <button class="duration-300 px-6 py-2 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg focus:bg-[#024B45]">Pausa longa • 15min</button>
+                        <button class="duration-300 px-6 py-2 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg  focus:bg-[#024B45]">Foco • 25min</button>
+                    </div>
+                    <p>Blocos concluidos de hoje: <span class="text-(--Cinzaazulado)"> 0 </span></p>
+                </div>
+
+                <div class="relative flex-1/2 rounded-2xl p-6 h-75 bg-[#0E111B] shadow-[0__0__1px__white,0__0__20px__#00000098] flex justify-end items-center flex-col">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="230" class="absolute top-0">
+                            <circle
+                                cx="100"
+                                cy="125"
+                                r="85"
+                                fill="none"
+                                stroke-width="11"
+                                class="stroke-[#0d948941]"
+                                />
+                                <circle
+                                cx="100"
+                                cy="125"
+                                r="85"
+                                fill="none"
+                                stroke-width="11"
+                                class="stroke-[#0d9489]"
+                            />
+                        </svg>
+                        <div class="absolute top-22 text-center flex flex-col gap-4">
+
+                            <p class="text-white font-black text-3xl tracking-wide">25:00</p>
+                            <span class="tracking-widest text-(--Corverde)">FOCO</span>
+                        </div>
+
+                        <div class="flex gap-4 [&>button]:w-25 [&>button]:py-2 [&>button]:shadow-[0__0__1px__white] [&>button]:rounded-lg">
+                            <button>Iniciar</button>
+                            <button>Reiniciar</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <br><br><br>
+
+    </body>
+    </html>
