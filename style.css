@@ -11,6 +11,7 @@
 
 .animar{
     color: #0d94898e;
+
 }
 
 @theme{
@@ -32,5 +33,11 @@
           stroke-dashoffset: 480;
           
         }
+    }   
+}
+@keyframes cronometroTeste{
+    to{
+        stroke-dashoffset: 550;
     }
 }
+
