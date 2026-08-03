@@ -9,6 +9,7 @@
     <script src="script.js" defer></script>
 
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body class="text-white bg-[#0B1120] h-300">
     
@@ -145,26 +146,28 @@
             </div>
         </main>
 
-        <section class="py-20 px-8 my-20 bg-[#0b1520] flex flex-col items-center">
+        <section class="p-8 py-12 my-20 bg-[#0b1520] flex flex-col gap-12 items-center">
             <div class="flex flex-col items-center text-center gap-4 max-w-full lg:w-120">
                 <span class="tracking-wider text-(--Corverde)">EXPERIMENTE AGORA</span>
                 <p class="text-5xl max-lg:text-4xl font-bold">Teste o modo foco aqui na página</p>
                 <span class="text-(--Cinzaazulado)">É exatamente assim que o cronômetro funciona dentro do app. Escolha um modo e comece.</span>
             </div>
-            <div class="flex h-full justify-center items-center">
 
-                <div class="flex-1/2 flex gap-5 flex-col mt-40">
+
+            <div class="flex max-w-250 gap-20 justify-center items-center">
+
+                <div class="flex-1/2 flex gap-5 flex-col">
                     <h2 class="font-bold tracking-wide text-(--Corverde) text-3xl">Um bloco por tarefa</h2>
                     <span> No modo <span class="text-(--Corverde)"> Foco </span>, você trabalha por 25 minutos sem interrupções. Depois, uma <span class="text-(--Corverde)"> pausa curta </span> de 5 minutos para respirar. A cada 4 blocos, <span class="text-(--Corverde)"> uma pausa longa. </span> Simples e comprovado. </span>
-                    <div class="flex gap-4">
-                        <button class="duration-300 px-6 py-2 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg focus:bg-[#024B45]">Pausa • 5min</button>
-                        <button class="duration-300 px-6 py-2 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg focus:bg-[#024B45]">Pausa longa • 15min</button>
-                        <button class="duration-300 px-6 py-2 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg  focus:bg-[#024B45]">Foco • 25min</button>
+                    <div class="flex items-center justify-center gap-4">
+                        <button class="duration-300 px-4 py-1.5 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg focus:bg-[#0D9489]" id="pausa">Pausa • 5min</button>
+                        <button class="duration-300 px-4 py-1.5 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg focus:bg-[#0D9489]"  id="pausaLonga">Pausa longa • 15min</button>
+                        <button class="duration-300 px-4 py-1.5 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg  focus:bg-[#0D9489]" id="foco"> Foco • 25min</button>
                     </div>
                     <p>Blocos concluidos de hoje: <span class="text-(--Cinzaazulado)"> 0 </span></p>
                 </div>
 
-                <div class="relative flex-1/2 rounded-2xl p-6 h-75 bg-[#0E111B] shadow-[0__0__1px__white,0__0__20px__#00000098] flex justify-end items-center flex-col">
+                <div class="relative flex-1/2 rounded-2xl p-6 h-90 bg-[#0E111B] shadow-[0__0__1px__white,0__0__20px__#00000098] flex justify-end items-center flex-col">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="230" class="absolute top-0">
                             <circle
@@ -176,23 +179,24 @@
                                 class="stroke-[#0d948941]"
                                 />
                                 <circle
+                                id="circleTest"
                                 cx="100"
                                 cy="125"
                                 r="85"
                                 fill="none"
                                 stroke-width="11"
-                                class="stroke-[#0d9489]"
+                                class="stroke-[#0d9489] [stroke-dasharray:535] -rotate-90 origin-center transform-fill"
                             />
                         </svg>
                         <div class="absolute top-22 text-center flex flex-col gap-4">
 
-                            <p class="text-white font-black text-3xl tracking-wide">25:00</p>
+                            <p class="text-white font-black text-3xl tracking-wide" id="temporizador">25:00</p>
                             <span class="tracking-widest text-(--Corverde)">FOCO</span>
                         </div>
 
                         <div class="flex gap-4 [&>button]:w-25 [&>button]:py-2 [&>button]:shadow-[0__0__1px__white] [&>button]:rounded-lg">
-                            <button>Iniciar</button>
-                            <button>Reiniciar</button>
+                            <button class="duration-200 bg-[#0d9489] hover:shadow-[0__2px__10px__#5b65734d] hover:-translate-y-1" id="iniciarTeste">Iniciar</button>
+                            <button class="duration-200 shadow hover:shadow-[#0d9489] hover:text-[#0d9489] hover:border-[#0d9489]" id="ReiniciarTeste">Reiniciar</button>
                         </div>
                 </div>
             </div>
