@@ -53,7 +53,7 @@ body.addEventListener("wheel", () => {
 
 let pmain = document.getElementById("temporazidorMain");
 
-let temporazidorMain = setTimeout(() => {
+let temporizadorMain = setInterval(() => {
   if (pmain.innerHTML == 0) {
     clearInterval(temporizadorMain);
   }
@@ -67,12 +67,18 @@ let temporazidorTeste = document.getElementById("temporizador");
 let iniciarTeste = document.getElementById("iniciarTeste");
 
 let tempooriginal = 1500;
-let tempo = 1500;
+let tempo = 5;
 
 let intervalo = ""
 
 //ELEMENTO DO SVG
 let circleTest = document.getElementById("circleTest")
+
+//BLOCOS CONCLUIDOS PARAGRAFO
+let blocosConcluidos = document.getElementById("blocosConcluidos")
+
+//DIA ATUAL
+let diaAtual = new Date().toLocaleString("BR", {dateStyle:"short"})
 
 function cronom(){
   iniciarTeste.disabled = "true"
@@ -81,9 +87,16 @@ function cronom(){
 
   intervalo = setInterval(() => {
 
-    if (tempo == 0) {
+    if (tempo == 0) {      
+      ReiniciarTeste()  
       clearInterval(intervalo);
       iniciarTeste.disabled = false
+
+      //MANIPULAR O CONTADOR DE BLOCOS CONCLUIDOS
+      if(localStorage.getItem("diaAtual") != diaAtual){
+        blocosConcluidos.innerHTML = parseInt(blocosConcluidos.innerHTML) + 1
+        localStorage.setItem("diaAtual", diaAtual)
+      }
     } else {
       --tempo;
 

@@ -154,9 +154,9 @@
             </div>
 
 
-            <div class="flex max-w-250 gap-20 justify-center items-center">
+            <div class="flex max-w-250 gap-20 justify-center items-center max-lg:flex-col">
 
-                <div class="flex-1/2 flex gap-5 flex-col">
+                <div class="flex-1/2 flex gap-5 flex-col max-lg:text-center">
                     <h2 class="font-bold tracking-wide text-(--Corverde) text-3xl">Um bloco por tarefa</h2>
                     <span> No modo <span class="text-(--Corverde)"> Foco </span>, você trabalha por 25 minutos sem interrupções. Depois, uma <span class="text-(--Corverde)"> pausa curta </span> de 5 minutos para respirar. A cada 4 blocos, <span class="text-(--Corverde)"> uma pausa longa. </span> Simples e comprovado. </span>
                     <div class="flex items-center justify-center gap-4">
@@ -164,10 +164,10 @@
                         <button class="duration-300 px-4 py-1.5 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg focus:bg-[#0D9489]"  id="pausaLonga">Pausa longa • 15min</button>
                         <button class="duration-300 px-4 py-1.5 hover:shadow-[0__0__5px__white] shadow-[0__0__1px__white] rounded-lg  focus:bg-[#0D9489]" id="foco"> Foco • 25min</button>
                     </div>
-                    <p>Blocos concluidos de hoje: <span class="text-(--Cinzaazulado)"> 0 </span></p>
+                    <p>Blocos concluidos de hoje: <span class="text-(--Cinzaazulado)" id="blocosConcluidos"> 0 </span></p>
                 </div>
 
-                <div class="relative flex-1/2 rounded-2xl p-6 h-90 bg-[#0E111B] shadow-[0__0__1px__white,0__0__20px__#00000098] flex justify-end items-center flex-col">
+                <div class="relative flex-1/2 max-lg:flex-auto w-full rounded-2xl p-6 h-90 bg-[#0E111B] shadow-[0__0__1px__white,0__0__20px__#00000098] flex justify-end items-center flex-col">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="230" class="absolute top-0">
                             <circle
