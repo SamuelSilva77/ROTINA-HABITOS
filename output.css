@@ -289,23 +289,8 @@
   .-rotate-90 {
     rotate: calc(90deg * -1);
   }
-  .rotate-90 {
-    rotate: 90deg;
-  }
   .rotate-270 {
     rotate: 270deg;
-  }
-  .rotate-x-180 {
-    --tw-rotate-x: rotateX(180deg);
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .rotate-y-90 {
-    --tw-rotate-y: rotateY(90deg);
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .rotate-y-180 {
-    --tw-rotate-y: rotateY(180deg);
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -644,35 +629,11 @@
     --tw-duration: 400ms;
     transition-duration: 400ms;
   }
-  .\[stroke-dasharray\:5\] {
-    stroke-dasharray: 5;
-  }
   .\[stroke-dasharray\:480\] {
     stroke-dasharray: 480;
   }
-  .\[stroke-dasharray\:500\] {
-    stroke-dasharray: 500;
-  }
-  .\[stroke-dasharray\:520\] {
-    stroke-dasharray: 520;
-  }
-  .\[stroke-dasharray\:530\] {
-    stroke-dasharray: 530;
-  }
-  .\[stroke-dasharray\:532\] {
-    stroke-dasharray: 532;
-  }
-  .\[stroke-dasharray\:533\] {
-    stroke-dasharray: 533;
-  }
-  .\[stroke-dasharray\:534\] {
-    stroke-dasharray: 534;
-  }
   .\[stroke-dasharray\:535\] {
     stroke-dasharray: 535;
-  }
-  .\[stroke-dasharray\:550\] {
-    stroke-dasharray: 550;
   }
   .transform-fill {
     transform-box: fill-box;
@@ -782,9 +743,29 @@
       justify-content: space-between;
     }
   }
+  .max-lg\:flex {
+    @media (width < 64rem) {
+      display: flex;
+    }
+  }
   .max-lg\:hidden {
     @media (width < 64rem) {
       display: none;
+    }
+  }
+  .max-lg\:w-full {
+    @media (width < 64rem) {
+      width: 100%;
+    }
+  }
+  .max-lg\:flex-\[100\%\] {
+    @media (width < 64rem) {
+      flex: 100%;
+    }
+  }
+  .max-lg\:flex-auto {
+    @media (width < 64rem) {
+      flex: auto;
     }
   }
   .max-lg\:flex-col {
@@ -795,6 +776,11 @@
   .max-lg\:gap-20 {
     @media (width < 64rem) {
       gap: calc(var(--spacing) * 20);
+    }
+  }
+  .max-lg\:text-center {
+    @media (width < 64rem) {
+      text-align: center;
     }
   }
   .max-lg\:text-4xl {
