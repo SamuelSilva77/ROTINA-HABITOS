@@ -54,11 +54,13 @@ body.addEventListener("wheel", () => {
 let pmain = document.getElementById("temporazidorMain");
 
 let temporizadorMain = setInterval(() => {
+  pmain.innerHTML -= 1;
+  
+  
   if (pmain.innerHTML == 0) {
     clearInterval(temporizadorMain);
   }
 
-  pmain.innerHTML -= 1;
 }, 1000);
 
 //TEMPORADIZDOR DA SECAO DE TESTE
@@ -67,7 +69,7 @@ let temporazidorTeste = document.getElementById("temporizador");
 let iniciarTeste = document.getElementById("iniciarTeste");
 
 let tempooriginal = 1500;
-let tempo = 5;
+let tempo = 1500;
 
 let intervalo = ""
 
@@ -77,8 +79,15 @@ let circleTest = document.getElementById("circleTest")
 //BLOCOS CONCLUIDOS PARAGRAFO
 let blocosConcluidos = document.getElementById("blocosConcluidos")
 
-//DIA ATUAL
+//MANIPULAR DATA
 let diaAtual = new Date().toLocaleString("BR", {dateStyle:"short"})
+let diaAtualCache = JSON.parse(localStorage.getItem("diaAtual")) || {}
+
+if(diaAtual != diaAtualCache.dia){
+  blocosConcluidos.innerHTML = 0
+}else{
+  blocosConcluidos.innerHTML = diaAtualCache.quant
+}
 
 function cronom(){
   iniciarTeste.disabled = "true"
@@ -92,11 +101,8 @@ function cronom(){
       clearInterval(intervalo);
       iniciarTeste.disabled = false
 
-      //MANIPULAR O CONTADOR DE BLOCOS CONCLUIDOS
-      if(localStorage.getItem("diaAtual") != diaAtual){
-        blocosConcluidos.innerHTML = parseInt(blocosConcluidos.innerHTML) + 1
-        localStorage.setItem("diaAtual", diaAtual)
-      }
+      blocosConcluidos.innerHTML = parseInt(blocosConcluidos.innerHTML) + 1
+      localStorage.setItem("diaAtual", JSON.stringify({dia:diaAtual, quant: blocosConcluidos.innerHTML}))
     } else {
       --tempo;
 
