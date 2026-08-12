@@ -117,11 +117,10 @@ function cronom(){
         minuto = "0" + minuto;
       }
 
-      temporazidorTeste.innerHTML = minuto[0] + minuto[1] + ":" + segundos;
+      temporazidorTeste.innerHTML = minuto.slice(0, 2) + ":" + segundos;
     }
   }, 1000);
 }
-
 //INICIAR TEMPORIZADOR
 iniciarTeste.addEventListener("click", () => {
   cronom()
@@ -131,25 +130,18 @@ iniciarTeste.addEventListener("click", () => {
 document.getElementById("pausa").addEventListener("click", () => {
   tempo = 300;
   tempooriginal = 300;
-  temporazidorTeste.innerHTML = "05:00";
-
-
   ReiniciarTeste()
 });
 
 document.getElementById("pausaLonga").addEventListener("click", () => {
   tempo = 900;
   tempooriginal = 900;
-  temporazidorTeste.innerHTML = "15:00";
-
   ReiniciarTeste()
 });
 
 document.getElementById("foco").addEventListener("click", () => {
   tempo = 1500;
   tempooriginal = 1500;
-  temporazidorTeste.innerHTML = "25:00";
-
   ReiniciarTeste()
 });
 
