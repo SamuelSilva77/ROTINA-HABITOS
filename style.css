@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-
-
-
 :root{
     --Corverde: #0D9488;
     --Cinzaazulado: #5B6573;
@@ -11,7 +8,6 @@
 
 .animar{
     color: #0d94898e;
-
 }
 
 @theme{
