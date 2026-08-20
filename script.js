@@ -158,3 +158,25 @@ ReiniciarTeste.addEventListener("click", ReiniciarTeste = () => {
   //SVG
   circleTest.style.animation = ""
 });
+
+//INTERSECTION OBSERVER
+
+let resultadosDiv = document.querySelectorAll("#resultadosDiv div")
+
+const observador = new IntersectionObserver((entries) => {
+
+    entries.forEach(item => {
+      if(item.isIntersecting){
+        item.target.classList.remove("opacity-0")
+        item.target.classList.remove("-translate-x-full")
+
+
+      }
+    })
+
+}, {
+  threshold: 0.5,
+  rootMargin: "0px 0px 0px 100%"
+})
+
+resultadosDiv.forEach(item => observador.observe(item));
