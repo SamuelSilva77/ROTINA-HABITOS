@@ -180,3 +180,30 @@ const observador = new IntersectionObserver((entries) => {
 })
 
 resultadosDiv.forEach(item => observador.observe(item));
+
+
+//ADICIONAR OBSERVADOR A TODOS OS ELEMENTOS HTML
+
+let tags = document.querySelectorAll("body div")
+
+
+const observadorHTML = new IntersectionObserver(entries => {
+  entries.forEach(item => {
+    if(item.isIntersecting){
+      console.log(item.target.id == "resultadosDiv")
+      item.target.classList.remove("translate-y-10")
+    }
+    
+    if(item.target.id == "resultadosDiv"){
+      document.querySelectorAll("#resultadosDiv div").forEach(item => item.classList.remove("translate-y-10"))
+    }
+  })
+}, {
+  threshold: 0.5
+})
+
+tags.forEach(element => {
+  observadorHTML.observe(element)
+  element.classList.add("duration-300")
+  element.classList.add("translate-y-10")
+});
