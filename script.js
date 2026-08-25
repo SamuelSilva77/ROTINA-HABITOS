@@ -207,5 +207,3 @@ tags.forEach(element => {
   element.classList.add("duration-300")
   element.classList.add("translate-y-10")
 });
-
- 
