@@ -190,7 +190,6 @@ let tags = document.querySelectorAll("body div")
 const observadorHTML = new IntersectionObserver(entries => {
   entries.forEach(item => {
     if(item.isIntersecting){
-      console.log(item.target.id == "resultadosDiv")
       item.target.classList.remove("translate-y-10")
     } 
 
