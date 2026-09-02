@@ -190,7 +190,7 @@ let tags = document.querySelectorAll("body div")
 const observadorHTML = new IntersectionObserver(entries => {
   entries.forEach(item => {
     if(item.isIntersecting){
-      item.target.classList.remove("translate-y-10")
+      item.target.classList.remove("translate-y-6")
     } 
 
     if(item.target.id == "resultadosDiv"){
@@ -198,11 +198,11 @@ const observadorHTML = new IntersectionObserver(entries => {
     }
   })
 }, {
-  threshold: 0.5
+  threshold: 0.3
 })
 
 tags.forEach(element => {
   observadorHTML.observe(element)
-  element.classList.add("duration-300")
-  element.classList.add("translate-y-10")
+  element.classList.add("duration-500")
+  element.classList.add("translate-y-6")
 });
