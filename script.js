@@ -206,3 +206,21 @@ tags.forEach(element => {
   element.classList.add("duration-500")
   element.classList.add("translate-y-6")
 });
+
+//SECAO PERGUNTAS
+
+let faq = document.querySelectorAll("#containerfaq img")
+
+faq.forEach((item, index) => {
+  item.addEventListener("click", () => {
+
+    let div = document.querySelectorAll("#containerfaq div")[index * 3]
+
+    if(div.classList.contains("h-auto")){
+      div.classList.remove("h-auto")
+    }else{
+      div.classList.add("h-auto")
+    }
+  
+  })
+})
