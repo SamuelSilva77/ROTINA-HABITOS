@@ -190,7 +190,7 @@ let tags = document.querySelectorAll("body div")
 const observadorHTML = new IntersectionObserver(entries => {
   entries.forEach(item => {
     if(item.isIntersecting){
-      item.target.classList.remove("translate-y-10")
+      item.target.classList.remove("translate-y-6")
     } 
 
     if(item.target.id == "resultadosDiv"){
@@ -198,11 +198,29 @@ const observadorHTML = new IntersectionObserver(entries => {
     }
   })
 }, {
-  threshold: 0.5
+  threshold: 0.3
 })
 
 tags.forEach(element => {
   observadorHTML.observe(element)
-  element.classList.add("duration-300")
-  element.classList.add("translate-y-10")
+  element.classList.add("duration-500")
+  element.classList.add("translate-y-6")
 });
+
+//SECAO PERGUNTAS
+
+let faq = document.querySelectorAll("#containerfaq img")
+
+faq.forEach((item, index) => {
+  item.addEventListener("click", () => {
+
+    let div = document.querySelectorAll("#containerfaq div")[index * 3]
+
+    if(div.classList.contains("h-auto")){
+      div.classList.remove("h-auto")
+    }else{
+      div.classList.add("h-auto")
+    }
+  
+  })
+})
