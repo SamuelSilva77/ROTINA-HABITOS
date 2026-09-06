@@ -214,13 +214,44 @@ let faq = document.querySelectorAll("#containerfaq img")
 faq.forEach((item, index) => {
   item.addEventListener("click", () => {
 
-    let div = document.querySelectorAll("#containerfaq div")[index * 3]
+    let div = document.querySelectorAll("#containerfaq div")[index * 2]
 
-    if(div.classList.contains("h-auto")){
-      div.classList.remove("h-auto")
+    AlterarResto(div)
+    
+    if(div.classList.contains("max-h-80")){
+      div.classList.remove("max-h-80")
+
+
+      item.classList.add("opacity-0")
+      
+      setTimeout(() => {
+        item.src = "img/plus.png"
+        item.classList.remove("opacity-0")
+      }, 400)
+      
     }else{
-      div.classList.add("h-auto")
+      div.classList.add("max-h-80")
+
+      item.classList.add("opacity-0")      
+      
+      setTimeout(() => {
+        item.src = "img/minus.png"
+        item.classList.remove("opacity-0")
+      }, 400);
     }
   
   })
 })
+
+function AlterarResto(div){
+    document.querySelectorAll("#containerfaq div").forEach((element, index) => {
+      if(index % 2 == 0 && element != div){
+        element.classList.remove("max-h-80")
+
+        faq.forEach(item => {
+          item.src = "img/plus.png"
+        })
+      }
+
+    })
+}
