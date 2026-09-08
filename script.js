@@ -219,39 +219,40 @@ faq.forEach((item, index) => {
     AlterarResto(div)
     
     if(div.classList.contains("max-h-80")){
-      div.classList.remove("max-h-80")
-
-
-      item.classList.add("opacity-0")
-      
-      setTimeout(() => {
-        item.src = "img/plus.png"
-        item.classList.remove("opacity-0")
-      }, 400)
+        alterarIMG(div, item,"plus", true)
       
     }else{
-      div.classList.add("max-h-80")
-
-      item.classList.add("opacity-0")      
-      
-      setTimeout(() => {
-        item.src = "img/minus.png"
-        item.classList.remove("opacity-0")
-      }, 400);
+        alterarIMG(div, item, "minus", false)
     }
   
   })
 })
 
 function AlterarResto(div){
-    document.querySelectorAll("#containerfaq div").forEach((element, index) => {
-      if(index % 2 == 0 && element != div){
-        element.classList.remove("max-h-80")
 
-        faq.forEach(item => {
-          item.src = "img/plus.png"
-        })
+    faq.forEach((item, index) => {
+
+      let element = document.querySelectorAll("#containerfaq div")[index * 2]
+      
+      if(element != div && element.classList.contains("max-h-80")){
+        alterarIMG(element, item, "plus", true)
       }
 
     })
+}
+
+function alterarIMG(div, item, img, remover){
+
+        if(remover){
+          div.classList.remove("max-h-80")
+        }else{
+          div.classList.add("max-h-80")
+        }
+        
+        item.classList.add("opacity-0")
+
+        setTimeout(() => {
+          item.src = `img/${img}.png`
+          item.classList.remove("opacity-0")
+        }, 400)
 }
