@@ -68,10 +68,9 @@ let temporizadorMain = setInterval(() => {
 let temporazidorTeste = document.getElementById("temporizador");
 let iniciarTeste = document.getElementById("iniciarTeste");
 
-let tempooriginal = 1500;
-let tempo = 1500;
+let [tempooriginal, tempo] = [1500, 1500]
 
-let intervalo = ""
+let intervalo;
 
 //ELEMENTO DO SVG
 let circleTest = document.getElementById("circleTest")
@@ -224,7 +223,6 @@ faq.forEach((item, index) => {
     }else{
         alterarIMG(div, item, "minus")
     }
-  
   })
 })
 
