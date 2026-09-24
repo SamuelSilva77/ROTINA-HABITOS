@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,10 @@
 
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="shortcut icon" href="img/clock.png" type="image/x-icon">
 </head>
-<body class="text-white bg-[#0B1120] h-300">
+<body id="principal" class="text-white bg-[#0B1120] h-300">
     
     <header class="z-50 duration-400 bg-[#0b1120] backdrop-blur-sm sticky top-0 px-8 h-17.5 flex items-center justify-evenly max-xl:justify-between">
         <div class="flex items-center gap-2">
@@ -22,11 +24,11 @@
         <!--PARTE PARA PC-->
         <div class="max-lg:hidden">
             <ul class="[&>li]:duration-200 text-(--Corverde) flex font-medium [&>li]:px-3 [&>li]:hover:text-white">
-                <li> <a href="">Recursos</a> </li>
-                <li> <a href="">Demo</a> </li>
-                <li> <a href="">Números</a> </li>
+                <li> <a href="#recursos">Recursos</a> </li>
+                <li> <a href="#Experimentar">Demo</a> </li>
+                <li> <a href="#numeros">Números</a> </li>
                 <li> <a href="">Planos</a> </li>
-                <li> <a href="">FAQ</a> </li>
+                <li> <a href="#FAQ">FAQ</a> </li>
             </ul>
         </div>
 
@@ -240,7 +242,7 @@
         </section>
 
 
-        <section class="px-8 py-10 flex justify-center items-center bg-[#08121b]">
+        <section id="recursos" class="px-8 py-10 flex justify-center items-center bg-[#08121b]">
 
             <div class="flex flex-col items-center text-center gap-6 w-250">
                 <div class="max-w-115 *:my-4">   
@@ -286,7 +288,7 @@
         </section>
 
 
-        <section class="px-8 py-12 my-20 flex flex-col gap-12 items-center">
+        <section id="Experimentar" class="px-8 py-12 my-20 flex flex-col gap-12 items-center">
             <div class="flex flex-col items-center text-center gap-4 max-w-full lg:w-120">
                 <span class="tracking-wider text-(--Corverde)">EXPERIMENTE AGORA</span>
                 <p class="text-5xl max-lg:text-4xl font-bold">Teste o modo foco aqui na página</p>
@@ -342,7 +344,7 @@
             </div>
         </section>
 
-        <section class="flex justify-center px-8 bg-[#08121b] py-25">
+        <section id="numeros" class="flex justify-center px-8 bg-[#08121b] py-25">
 
             <div class="grid grid-cols-4 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-4 max-w-250 grow-2 justify-center" id="resultadosDiv">
 
@@ -379,6 +381,113 @@
             </div>
         </section>
 
+        <section class="bg-[#08121b] px-8 py-10 flex items-center justify-center flex-col">
+            <div class="w-full max-w-250 flex flex-col gap-15 justify-center items-center">
+                <div class="w-1/2 max-md:w-full text-center *:mt-2">
+                    <span class="text-(--Corverde) tracking-wide">PREÇOS</span>
+                    <h1 class="max-sm:text-3xl text-4xl font-bold">Comece Grátis, evolua quando quiser</h1>
+                    <p class="text-(--Cinzaazulado)">Sem pegadinhas. Cancele quando quiser</p>
+                </div>
+                <div class="grid grid-cols-3 gap-5 max-md:grid-cols-2 max-sm:grid-cols-1 *:border *:px-4 *:py-5">
+                    <div>
+                        <p>Grátis</p>
+
+                        <h2>R$0 <span>/Mês</span> </h2>
+                        <div>
+                            <span>Tarefas ilimitadas</span>
+                            <span>Modo foco completo</span>
+                            <span>1 dispositivo</span>
+                            <span>Relátorio dos ultimos sete dias</span>
+                        </div>
+
+                        <button>Começar gratis</button>
+                    </div>
+                    <div>
+                        <p>Grátis</p>
+
+                        <h2>R$0 <span>/Mês</span> </h2>
+                        <div>
+                            <span>Tarefas ilimitadas</span>
+                            <span>Modo foco completo</span>
+                            <span>1 dispositivo</span>
+                            <span>Relátorio dos ultimos sete dias</span>
+                        </div>
+
+                        <button>Começar gratis</button>
+                    </div>
+                    <div>
+                        <p>Grátis</p>
+
+                        <h2>R$0 <span>/Mês</span> </h2>
+                        <div>
+                            <span>Tarefas ilimitadas</span>
+                            <span>Modo foco completo</span>
+                            <span>1 dispositivo</span>
+                            <span>Relátorio dos ultimos sete dias</span>
+                        </div>
+
+                        <button>Começar gratis</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="FAQ" class="px-8 py-10 flex items-center justify-center flex-col">
+            <div class="w-full max-w-180 flex flex-col gap-5 justify-center items-center">
+                <div class="text-center *:my-3">   
+                    <p class="text-sm font-bold text-(--Corverde) tracking-wide">DÚVIDAS</p>
+                    <h2 class="font-bold text-4xl max-md:text-3xl">Perguntas Frequentes</h2>
+                </div>
+
+                <div id="containerfaq"  class="w-full  [&>div]:rounded-lg [&>div]:overflow-hidden [&>div]:mt-3 [&>div]:bg-[#08111B] [&>div]:p-6 [&>div]:shadow-[0__0__1px__white]">
+
+                    <div class="max-h-18 duration-800 ease-linear">
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold max-md:text-sm">Afinal, o Rotina é um app de tarefas ou um timer?</p>
+                            <img class="duration-300 pl-2" src="img/plus.png" alt="abrir">
+                        </div>
+
+                        <span class="flex mt-6 text-(--Corverde)">Os dois, juntos. O Rotina é onde você planeja suas tarefas e, no mesmo lugar, usa o modo foco para executá-las. A ideia é não precisar de dois apps separados.</span>
+
+                    </div>
+
+                    <div class="max-h-18 duration-800 ease-linear">
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold max-md:text-sm">Preciso pagar para usar?</p>
+                            <img class="duration-300pl-2" src="img/plus.png" alt="">
+                        </div>
+
+                        <span class="text-(--Corverde) mt-6 flex">Não. O plano Grátis já inclui tarefas ilimitadas e o modo foco completo. Você só paga se quiser recursos como sincronização entre vários aparelhos e relatórios avançados.</span>
+
+                    </div>
+
+                    <div class="max-h-18 duration-800 ease-linear">
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold max-md:text-sm">Funciona offline?</p>
+                            <img class="duration-300 pl-2" src="img/plus.png" alt="">
+                        </div>
+
+                        <span class="text-(--Corverde) mt-6 flex">Sim. Você pode planejar e focar sem internet. Quando voltar a ficar online, tudo sincroniza automaticamente.</span>
+
+                    </div>
+
+                    <div class="max-h-18 duration-800 ease-linear">
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold max-md:text-sm">Serve para o meu time?</p>
+                            <img class="pl-2" src="img/plus.png" alt="">
+                        </div>
+
+                        <span class="text-(--Corverde) mt-6 flex">Serve. O plano Times traz espaços compartilhados e um painel para acompanhar o foco do grupo, mantendo a simplicidade do app.</span>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </section>
 
 
         <footer class="text-(--Corverde) px-8 py-10 flex justify-center bg-[#08121b]">
@@ -393,25 +502,25 @@
                 <div class="flex justify-between [&>div>p]:text-white [&>div>p]:font-bold">
                     <div>
                         <p>Produto</p>
-                        <ul>
-                            <li>Recurso</li>
-                            <li>Experimentar</li>
-                            <li>Preços</li>
+                        <ul class="*:cursor-pointer  *:hover:text-(--Cinzaazulado) flex flex-col">
+                            <a href="#recursos">Recurso</a>
+                            <a href="#Experimentar">Experimentar</a>
+                            <a href="">Preços</a>
                         </ul>
                     </div>
                     <div>
                         <p>Empresa</p>
-                        <ul>
-                            <li>Sobre</li>
-                            <li>Blog</li>
-                            <li>Contato</li>
+                        <ul class="*:cursor-pointer *:hover:text-(--Cinzaazulado) flex flex-col">
+                            <a href="#principal">Sobre</a>
+                            <a href="#principal">Blog</a>
+                            <a href="#principal">Contato</a>
                         </ul>
                     </div>
                     <div>
                         <p>Legal</p>
-                        <ul>
-                            <li>Privacidade</li>
-                            <li>Termos</li>
+                        <ul class="*:cursor-pointer *:hover:text-(--Cinzaazulado) flex flex-col">
+                            <a href="#principal">Privacidade</a>
+                            <a href="#principal">Termos</a>
                         </ul>
                     </div>
                 </div>
