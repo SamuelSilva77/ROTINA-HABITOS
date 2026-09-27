@@ -261,8 +261,14 @@
   .h-90 {
     height: calc(var(--spacing) * 90);
   }
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
   .h-120 {
     height: calc(var(--spacing) * 120);
+  }
+  .h-200 {
+    height: calc(var(--spacing) * 200);
   }
   .h-300 {
     height: calc(var(--spacing) * 300);
@@ -425,9 +431,6 @@
   }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
-  }
-  .scroll-smooth {
-    scroll-behavior: smooth;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -796,9 +799,29 @@
       display: flex;
     }
   }
+  .\*\:h-50 {
+    :is(& > *) {
+      height: calc(var(--spacing) * 50);
+    }
+  }
   .\*\:h-52 {
     :is(& > *) {
       height: calc(var(--spacing) * 52);
+    }
+  }
+  .\*\:h-80 {
+    :is(& > *) {
+      height: calc(var(--spacing) * 80);
+    }
+  }
+  .\*\:h-90 {
+    :is(& > *) {
+      height: calc(var(--spacing) * 90);
+    }
+  }
+  .\*\:h-100 {
+    :is(& > *) {
+      height: calc(var(--spacing) * 100);
     }
   }
   .\*\:cursor-pointer {
@@ -821,15 +844,19 @@
       gap: calc(var(--spacing) * 3);
     }
   }
+  .\*\:rounded-2xl {
+    :is(& > *) {
+      border-radius: var(--radius-2xl);
+    }
+  }
   .\*\:rounded-lg {
     :is(& > *) {
       border-radius: var(--radius-lg);
     }
   }
-  .\*\:border {
+  .\*\:rounded-xl {
     :is(& > *) {
-      border-style: var(--tw-border-style);
-      border-width: 1px;
+      border-radius: var(--radius-xl);
     }
   }
   .\*\:bg-\[\#08111B\] {
@@ -847,9 +874,9 @@
       padding-inline: calc(var(--spacing) * 4);
     }
   }
-  .\*\:px-8 {
+  .\*\:px-6 {
     :is(& > *) {
-      padding-inline: calc(var(--spacing) * 8);
+      padding-inline: calc(var(--spacing) * 6);
     }
   }
   .\*\:py-5 {
@@ -857,9 +884,9 @@
       padding-block: calc(var(--spacing) * 5);
     }
   }
-  .\*\:py-10 {
+  .\*\:py-8 {
     :is(& > *) {
-      padding-block: calc(var(--spacing) * 10);
+      padding-block: calc(var(--spacing) * 8);
     }
   }
   .\*\:shadow-\[0__0__1px__white\] {
@@ -1094,11 +1121,6 @@
   .max-sm\:grid-cols-1 {
     @media (width < 40rem) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-  }
-  .max-sm\:grid-cols-2 {
-    @media (width < 40rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .max-sm\:flex-col {
